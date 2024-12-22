@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testing.TaskNotificationController" alignment="CENTER" spacing="10.0">
+    <Label fx:id="taskTitleLabel" text="Task Title" />
+
+    <ComboBox fx:id="notificationCategoryComboBox" promptText="Select Notification Category">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="One day before"/>
+                <String fx:value="One week before"/>
+                <String fx:value="One month before"/>
+                <String fx:value="Choose date"/>
+
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <DatePicker fx:id="specificDatePicker" visible="false" promptText="Select Date"/>
+    <Button fx:id="saveNotificationButton" text="Save Notification" onAction="#saveNotification" />
+</VBox>
+
+

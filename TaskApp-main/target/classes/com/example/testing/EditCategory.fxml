@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testing.EditCategoryController">
+    <Label text="Categories" style="-fx-font-size: 20px;" />
+    <ListView fx:id="categoryListView">
+        <items>
+            <FXCollections fx:factory="observableArrayList" />
+        </items>
+    </ListView>
+    <HBox alignment="CENTER" spacing="5.0">
+        <Button text="Add Category" onAction="#openAddCategoryForm" />
+    </HBox>
+</VBox>
+

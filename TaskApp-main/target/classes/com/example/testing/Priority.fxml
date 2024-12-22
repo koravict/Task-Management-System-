@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testing.AddPriorityController">
+    <TextField fx:id="priorityNameField" promptText="Priority Name" />
+    <Button text="Add Priority" onAction="#addPriority" />
+</VBox>
+

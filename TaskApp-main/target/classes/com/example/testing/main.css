@@ -1,0 +1,113 @@
+/* styles.css */
+
+/* Root styles for the whole application */
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-base: #f8f9fa; /* Light background color */
+}
+
+/* Label styling */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333; /* Dark grey text */
+}
+.titleLabel {
+    -fx-alignment: center;
+    -fx-font-size: 50px;
+}
+/* Button styling */
+.button {
+    -fx-background-color: linear-gradient(to bottom, lightblue, blue); /* Green button */
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 1, 0, 0, 1);
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #50b6ec, #4a89f2); /* Darker on hover */
+}
+
+/* ListView cell styling */
+.list-cell {
+    -fx-padding: 10px;
+    -fx-background-color: #ffffff; /* White background for cells */
+    -fx-background-insets: 0;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 0 0 1px 0; /* Bottom border only */
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #e0f7fa; /* Light cyan for selected */
+}
+
+.table-view {
+    -fx-control-inner-background: #f5f9ff; /* Slightly darker grey */
+}
+
+/* TextField styling */
+.text-input {
+    -fx-border-radius: 4px;
+    -fx-border-color: #cccccc;
+    -fx-background-color: #ffffff;
+    -fx-padding: 8px;
+}
+
+.text-input:focused {
+    -fx-border-color: #66AFE9;
+    -fx-effect: dropshadow(three-pass-box, rgba(102,175,233,0.7), 10, 0, 0, 3);
+}
+
+/* VBox and HBox spacing */
+.vbox {
+    -fx-spacing: 15px;
+    -fx-background-color: #c8e7fe;
+}
+
+.hbox {
+    -fx-spacing: 10px;
+    -fx-background-color:#f5f9ff;
+
+}
+
+/* Tooltip styling */
+.tooltip {
+    -fx-background-color: #323232;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+}
+
+/* Custom class for specific parts, e.g. task labels */
+.task-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #515151;
+    -fx-font-weight: bold;
+}
+
+/* Custom styles for priority indication */
+.high-priority {
+    -fx-background-color: #ffeb3b; /* Yellow */
+}
+
+.low-priority {
+    -fx-background-color: #8bc34a; /* Light Green */
+}
+
+.default-priority {
+    -fx-background-color: #e0e0e0; /* Light Grey */
+}
+
+/* Custom style for notification button */
+.notification-button {
+    -fx-background-color: #ff5722; /* Deep orange */
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+.editTask-button{
+    -fx-background-color: #ff5722; /* Deep orange */
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+.notification-button:disabled {
+    -fx-background-color: #9e9e9e; /* Grey when disabled */
+}

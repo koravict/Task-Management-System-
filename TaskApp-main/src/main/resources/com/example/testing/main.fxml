@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="10.0" styleClass="vbox" stylesheets="@main.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testing.MainController">
+
+    <!-- Header Label -->
+    <Label fx:id="titleLabel" contentDisplay="CENTER" prefHeight="74.0" prefWidth="478.0" styleClass="titleLabel" stylesheets="@main.css" text="MediaLab Assistant" textAlignment="CENTER">
+      <font>
+         <Font size="36.0" />
+      </font>
+      <textFill>
+         <LinearGradient endX="0.7613636652628579" endY="0.8446969507318554" startX="0.7613636056582133" startY="0.3825758081493956">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill></Label>
+
+    <!-- Summary Statistics -->
+    <HBox alignment="CENTER" spacing="20" style="-fx-padding: 10; -fx-background-color: #f5f9ff;" styleClass="hbox" stylesheets="@main.css">
+        <Label text="Total Tasks: " />
+        <Label fx:id="totalTasksLabel" />
+
+        <Label text="Completed: " />
+        <Label fx:id="completedTasksLabel" />
+
+        <Label text="Delayed: " />
+        <Label fx:id="delayedTasksLabel" />
+
+        <Label text="Due Soon: " />
+        <Label fx:id="dueSoonTasksLabel" />
+    </HBox>
+
+    <!-- Search Criteria Section -->
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Title: " />
+        <TextField fx:id="titleSearchField" promptText="Enter title" />
+
+        <Label text="Category: " />
+        <ComboBox fx:id="categoryComboBox" promptText="Select category" />
+
+        <Label text="Priority: " />
+        <ComboBox fx:id="priorityComboBox" promptText="Select priority" />
+
+        <Button onAction="#handleSearchButtonClick" text="Search" />
+        <Button onAction="#handleResetButtonClick" text="Reset search criteria" />
+    </HBox>
+
+    <!-- Task Table -->
+    <TableView fx:id="taskTableView" prefHeight="200.0" prefWidth="400.0" stylesheets="@main.css">
+        <columns>
+            <TableColumn fx:id="titleColumn" prefWidth="80" text="Title" />
+            <TableColumn fx:id="categoryColumn" prefWidth="80" text="Category" />
+            <TableColumn fx:id="priorityColumn" prefWidth="80" text="Priority" />
+            <TableColumn fx:id="statusColumn" prefWidth="80" text="Status" />
+            <TableColumn fx:id="deadlineColumn" prefWidth="80" text="Deadline" />
+            <TableColumn fx:id="actionColumn" prefWidth="80" text="Actions" />
+        </columns>
+    </TableView>
+
+    <!-- Functional Buttons Section -->
+    <HBox alignment="CENTER" spacing="10.0">
+        <Button onAction="#openAddTaskForm" text="Add Task" />
+        <Button onAction="#openCategoriesForm" text="Categories" />
+        <Button onAction="#handleNotificationsButtonClick" text="View Notifications" />
+        <Button onAction="#openPrioritiesForm" text="Priorities" />
+    </HBox>
+
+</VBox>

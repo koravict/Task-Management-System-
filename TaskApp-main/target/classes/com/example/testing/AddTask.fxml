@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testing.AddTaskController">
+    <TextField fx:id="titleField" promptText="Title" />
+    <TextField fx:id="descriptionField" promptText="Description" />
+    <ComboBox fx:id="categoryComboBox" promptText="Select Category" />
+    <ComboBox fx:id="priorityComboBox" promptText="Select Priority" />
+
+    <DatePicker fx:id="deadlinePicker" promptText="Deadline" />
+
+    <Button text="Add Task" onAction="#addTask" />
+</VBox>
+
+
+
+
+
